@@ -1,5 +1,5 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
 name: SBFspot for HA
-url: "https://github.com/habuild/hassio-addons"
-maintainer: HasQT <https://community.home-assistant.io/u/hasqt>
+url: "https://github.com/timlaing/sbfspot-ha-addon"
+maintainer: timlaing <https://github.com/timlaing>

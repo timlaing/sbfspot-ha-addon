@@ -1,7 +1,7 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Habuild addon Sensors Generate
+# timlaing%2Fsbfspot-ha-addon addon Sensors Generate
 # Runs SensorsGen
 # ==============================================================================
 declare -a options

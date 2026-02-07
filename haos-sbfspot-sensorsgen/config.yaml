@@ -3,8 +3,8 @@ name: HAOS-SBFspot SensorsGen
 version: 2025.10.1
 slug: haos-sbfspot-sensorsgen
 description: Create extra sensors for SBFspot multiple inverter setups
-url: "https://github.com/habuild/hassio/tree/main/haos-sbfspot-sensorsgen"
-image: "ghcr.io/habuild/{arch}-addon-haos-sbfspot-sensorsgen"
+url: "https://github.com/timlaing%2Fsbfspot-ha-addon/hassio/tree/main/haos-sbfspot-sensorsgen"
+image: "ghcr.io/timlaing%2Fsbfspot-ha-addon/{arch}-addon-haos-sbfspot-sensorsgen"
 arch:
   - armv7
   - aarch64

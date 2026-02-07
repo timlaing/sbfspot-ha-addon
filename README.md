@@ -1,14 +1,14 @@
 [![Release][release-shield]][release] ![Project Stage][project-stage-shield] ![Project Maintenance][maintenance-shield]
 
-# Repository add-on by Habuild
+# Repository add-on by timlaing
 
 Add-on documentation: <https://developers.home-assistant.io/docs/add-ons>
 
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fhabuild%2Fhassio-addons)
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%timlaing%2Fsbfspot-ha-addon)
 
 ## Installation and configuration
 
-Add ([this respository](https://github.com/habuild/hassio-addons)) to Home Assistant via the superviser > new respository menu > add respository
+Add ([this repository](https://github.com/timlaing/sbfspot-ha-addon)) to Home Assistant via the supervisor > new repository menu > add repository
 
 Fill in the config details to setup Inverter connection, Database, MQTT , and Upload API.
 
@@ -16,8 +16,8 @@ Start the addon
 
 ## [haos-sbfspot](./haos-sbfspot)
 
-![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
-![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
+![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%timlaing%2Fsbfspot-ha-addon%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
+![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
 This version is for Home Assistant Operating System HAOS.
 
@@ -25,16 +25,16 @@ It works with HAOS or HA Docker/Supervised.
 
 It creates a wrapper to configure the official SBFspot releases.
 
-### [Detailed Installation](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/README.md)
+### [Detailed Installation](https://github.com/timlaing/sbfspot-ha-addon/blob/main/haos-sbfspot/README.md)
 
 ## [SBFspot](./sbfspot)
 
-![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.yaml)
-![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.yaml)
+![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fmain%2Fsbfspot%2Fconfig.yaml)
+![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fmain%2Fsbfspot%2Fconfig.yaml)
 
 This version is for testing purposes.
 
-### [Detailed Installation](https://github.com/habuild/hassio-addons/blob/main/sbfspot/README.md)
+### [Detailed Installation](https://github.com/timlaing/sbfspot-ha-addon/blob/main/sbfspot/README.md)
 
 <!--
 
