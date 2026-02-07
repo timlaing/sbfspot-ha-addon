@@ -29,7 +29,7 @@ RUN apk update && apk add --no-cache \
 # download and build SBFspot
 WORKDIR /tmp
 RUN \
-    git clone https://github.com/timlaing/SBFspot.git -b feature/single-inverter-maintain-connection . \
+    git clone https://github.com/SBFspot/SBFspot . \
     && sed -i s/mariadbclient/mariadb/ ./SBFspot/makefile \
     && make -C ./SBFspot mariadb \
     && sed -i s/mariadbclient/mariadb/ ./SBFspotUploadDaemon/makefile \
