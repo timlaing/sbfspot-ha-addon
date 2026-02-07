@@ -2,9 +2,10 @@
 
 # SBFspot addon for HAOS
 
-![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
-![Project Stage](https://img.shields.io/badge/dynamic/yaml?color=blueviolet&label=Project%20Stage&query=%24.stage&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
-![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
+![Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Frefs%2Fheads%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml&query=%24.version&label=Version)
+
+![Project Stage](https://img.shields.io/badge/dynamic/yaml?color=blueviolet&label=Project%20Stage&query=%24.stage&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Frefs%2Fheads%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
+![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Frefs%2Fheads%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 ![Project Maintenance][maintenance-shield] [![CI](https://github.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/actions/workflows/addon-ci.yaml/badge.svg)](https://github.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/actions/workflows/addon-ci.yaml)
 
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
