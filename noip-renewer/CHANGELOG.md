@@ -1,4 +1,4 @@
-# ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio%2Fmain%2Fnoip-renewer%2Fconfig.yaml)
+# ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fhassio%2Fmain%2Fnoip-renewer%2Fconfig.yaml)
 
 - Initial creation
 

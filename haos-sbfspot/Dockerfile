@@ -15,21 +15,21 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # install requirements
 RUN apk update && apk add --no-cache \
-    bluez=5.79-r0 \
-    bluez-dev=5.79-r0 \
-    boost-dev=1.84.0-r2 \
-    curl-dev=8.12.1-r0 \
-    git=2.47.2-r0 \
-    g++=14.2.0-r4 \
-    make=4.4.1-r2 \
-    mariadb-dev=11.4.5-r0\
-    mosquitto-clients=2.0.20-r0 \
-    tzdata=2025a-r0
-           
+    bluez \
+    bluez-dev \
+    boost-dev \
+    curl-dev \
+    git \
+    g++ \
+    make \
+    mariadb-dev \
+    mosquitto-clients \
+    tzdata
+
 # download and build SBFspot
 WORKDIR /tmp
 RUN \
-    git clone https://github.com/sbfspot/SBFspot.git . \
+    git clone https://github.com/timlaing/SBFspot.git -b feature/single-inverter-maintain-connection . \
     && sed -i s/mariadbclient/mariadb/ ./SBFspot/makefile \
     && make -C ./SBFspot mariadb \
     && sed -i s/mariadbclient/mariadb/ ./SBFspotUploadDaemon/makefile \
@@ -48,20 +48,15 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 
 RUN apk update && apk add --no-cache \
-    bluez=5.79-r0 \
-    bluez-libs=5.79-r0 \
-    nano=8.2-r0 \
-    libstdc++=14.2.0-r4 \
-    mariadb-common=11.4.5-r0 \
-    mariadb-connector-c=3.3.10-r0 \
-    ncurses-libs=6.5_p20241006-r3 \
-    libcurl=8.12.1-r0 \
-    mosquitto-clients=2.0.20-r0
-    
-    #tzdata=2023c-r1 
-    #boost-date_time1.78 
-
-
+    bluez \
+    bluez-libs \
+    nano \
+    libstdc++ \
+    mariadb-common \
+    mariadb-connector-c \
+    ncurses-libs \
+    libcurl \
+    mosquitto-clients
 
 # Copy data for add-on
 WORKDIR /usr/bin/sbfspot
@@ -86,9 +81,9 @@ RUN chmod a+x /etc/services.d/sbfspot/** /usr/bin/sbfspot/**
 # set shell
 RUN echo 'SHELL=/bin/bash' > /etc/crontabs/root
 # update sensors after restart
-RUN echo '@reboot sleep 30 && /usr/bin/sbfspot/SBFspot -v -ad0 -am0 -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
+RUN echo '@reboot sleep 10 && /usr/bin/sbfspot/SBFspot -v -ad1 -am0 -ae0 -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
 # daily data SBFspot
-RUN echo '*/5 6-22 * * *    /usr/bin/sbfspot/SBFspot -v -ad1 -am0 -ae0 -mqtt > /dev/stdout' >> /etc/crontabs/root
+# RUN echo '* * * * *    /usr/bin/sbfspot/SBFspot -v -ad1 -am0 -ae0 -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
 # monthly data SBFspot archive upload at 5:55am now with -mqtt call
 RUN echo '55 05 * * *       /usr/bin/sbfspot/SBFspot -v -sp0 -ad14 -am1 -ae1 -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
 # start SBFspotUpload 1 min after boot
@@ -103,17 +98,13 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Hasqt <https://community.home-assistant.io/u/hasqt>" \
+    maintainer="timlaing <https://github.com/timlaing>" \
     org.label-schema.description="Home Assistant addon for Bluetooth SBFspot, is an open source project to get actual and archive data out of an SMA® inverter over Bluetooth or Ethernet (Speedwire®)" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="HAOS-SBFspot" \
     org.label-schema.schema-version="1.0" \
-    org.label-schema.url="https://github.com/habuild/hassio-addons/tree/main/haos-sbfspot" \
-    org.label-schema.usage="https://github.com/habuild/hassio-addons/tree/main/haos-sbfspot/README.md" \
+    org.label-schema.url="https://github.com/timlaing/sbfspot-ha-addon/tree/main/haos-sbfspot" \
+    org.label-schema.usage="https://github.com/timlaing/sbfspot-ha-addon/tree/main/haos-sbfspot/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/habuild/hassio-addons" \
-    org.label-schema.vendor="Hasqt"
-
-
-#Launch nginx with debug options. not working yet
-#CMD [ "nginx","-g","daemon off;error_log /dev/stdout debug;" ] 
+    org.label-schema.vcs-url="https://github.com/timlaing/sbfspot-ha-addon" \
+    org.label-schema.vendor="timlaing"

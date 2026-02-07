@@ -2,15 +2,15 @@
 
 # SBFspot addon for HAOS
 
-![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
-![Project Stage](https://img.shields.io/badge/dynamic/yaml?color=blueviolet&label=Project%20Stage&query=%24.stage&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
-![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
-![Project Maintenance][maintenance-shield] [![CI](https://github.com/habuild/hassio-addons/actions/workflows/addon-ci.yaml/badge.svg)](https://github.com/habuild/hassio-addons/actions/workflows/addon-ci.yaml)
+![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
+![Project Stage](https://img.shields.io/badge/dynamic/yaml?color=blueviolet&label=Project%20Stage&query=%24.stage&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
+![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
+![Project Maintenance][maintenance-shield] [![CI](https://github.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/actions/workflows/addon-ci.yaml/badge.svg)](https://github.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/actions/workflows/addon-ci.yaml)
 
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
 
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fhabuild%2Fhassio-addons)
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fhassio-addons)
 
 This [home assistant](https://www.home-assistant.io/getting-started/) add-on provides a wrapper for the **Bluetooth** version of [![SBFspot](https://img.shields.io/badge/dynamic/json?color=blue&label=SBFspot&query=tag_name&suffix=%20latest&url=https%3A%2F%2Fgithub.com%2FSBFspot%2FSBFspot%2Freleases%2Flatest)](https://github.com/SBFspot/SBFspot/releases/latest)
 
@@ -64,7 +64,7 @@ The above options are the only required options if you want to fill out the opti
 <details><summary> OPTIONS Image </summary>
 <p>
 
-![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/UIoptions.PNG)
+![screenshot](https://raw.githubusercontent.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/main/.images/UIoptions.PNG)
 
 </p>
 </details>
@@ -108,7 +108,7 @@ PrgVersion,Plantname,Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatu
 <details><summary>MQTT Image</summary>
 <p>
 
-![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/mqttcap.PNG)
+![screenshot](https://raw.githubusercontent.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/main/.images/mqttcap.PNG)
 
 </p>
 </details>
@@ -159,9 +159,9 @@ Updating the new energy sensor to follow the old energy sensor on the energy das
 
 ### Prior to 2022.9.1
 
-[haos-sbfspot_sensors.yaml](https://github.com/habuild/hassio-addons/blob/main/.images/sbfspot_sensors.yaml) I use packages to include these yaml sensors. You will need to change to match your plant name and serial as you have set in the add-on configuration options.
+[haos-sbfspot_sensors.yaml](https://github.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/blob/main/.images/sbfspot_sensors.yaml) I use packages to include these yaml sensors. You will need to change to match your plant name and serial as you have set in the add-on configuration options.
 
-**MQTT options argument** [configuration options](https://github.com/habuild/hassio-addons/blob/main/.images/Example_Config.yaml) The MQTT Username, and Password need to be hardcoded into the **MQTT_PublisherArgs:** The **{host}** **{topic}** and **{{message}}** will be picked up from options.
+**MQTT options argument** [configuration options](https://github.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/blob/main/.images/Example_Config.yaml) The MQTT Username, and Password need to be hardcoded into the **MQTT_PublisherArgs:** The **{host}** **{topic}** and **{{message}}** will be picked up from options.
 
 **MQTT_PublisherArgs:** **'-h {host} -u Your_MQTT_Username -P Your_MQTT_password -t {topic} -m "{{message}}" -d -r'**
 
@@ -179,9 +179,9 @@ Updating the new energy sensor to follow the old energy sensor on the energy das
 
 ### Initial database creation.
 
-Download and import either [No Drop DB create](https://github.com/habuild/hassio-addons/blob/main/.images/CreateMySQLDB_no_drop.sql) **or** [Create My SQL.sql](https://github.com/SBFspot/SBFspot/blob/master/SBFspot/CreateMySQLDB.sql) in [phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) to create your database. **IF** you haven't already created the database previously, use the NO Drop version. You will also need to add the Database and User/Password to MariaDB and allocate the port.
+Download and import either [No Drop DB create](https://github.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/blob/main/.images/CreateMySQLDB_no_drop.sql) **or** [Create My SQL.sql](https://github.com/SBFspot/SBFspot/blob/master/SBFspot/CreateMySQLDB.sql) in [phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) to create your database. **IF** you haven't already created the database previously, use the NO Drop version. You will also need to add the Database and User/Password to MariaDB and allocate the port.
 
-![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/MariaDB%20setup.PNG)
+![screenshot](https://raw.githubusercontent.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/main/.images/MariaDB%20setup.PNG)
 
 <br></br>
 
@@ -200,9 +200,5 @@ Refer to the [SBFspot Wiki](https://github.com/sbfspot/sbfspot/wiki) for documen
 - The sbfspot team for SPFspot.
 
 ![Supports aarch64 Architecture][aarch64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg

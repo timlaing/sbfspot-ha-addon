@@ -110,10 +110,10 @@ LABEL \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="TriINV-SBFspot" \
     org.label-schema.schema-version="1.0" \
-    org.label-schema.url="https://github.com/habuild/hassio-addons/tree/main/haos-sbfspot" \
-    org.label-schema.usage="https://github.com/habuild/hassio-addons/tree/main/haos-sbfspot/README.md" \
+    org.label-schema.url="https://github.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/tree/main/haos-sbfspot" \
+    org.label-schema.usage="https://github.com/timlaing%2Fsbfspot-ha-addon/hassio-addons/tree/main/haos-sbfspot/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/habuild/hassio-addons" \
+    org.label-schema.vcs-url="https://github.com/timlaing%2Fsbfspot-ha-addon/hassio-addons" \
     org.label-schema.vendor="Hasqt"
 
 
