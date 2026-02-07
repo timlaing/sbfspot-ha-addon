@@ -1,6 +1,6 @@
 ---
 
-# SBFspot addon for HAOS
+# SBFspot addon for HAOS (Single Inverter)
 
 ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 ![Project Stage](https://img.shields.io/badge/dynamic/yaml?color=blueviolet&label=Project%20Stage&query=%24.stage&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftimlaing%2Fsbfspot-ha-addon%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
@@ -244,9 +244,5 @@ Refer to the [SBFspot Wiki](https://github.com/sbfspot/sbfspot/wiki) for documen
 - The sbfspot team for SPFspot.
 
 ![Supports aarch64 Architecture][aarch64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
