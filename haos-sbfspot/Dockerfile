@@ -5,7 +5,7 @@ FROM $BUILD_FROM AS builder-base
 # Execute during the build of the image
 ARG TEMPIO_VERSION BUILD_ARCH
 RUN \
-    curl -sSLf -o /usr/bin/tempio \
+    curl --proto '=https' --proto-redir '=https' -sSLf -o /usr/bin/tempio \
     "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
 
 # Copy root filesystem
@@ -41,7 +41,7 @@ FROM $BUILD_FROM
 
 ARG TEMPIO_VERSION BUILD_ARCH
 RUN \
-    curl -sSLf -o /usr/bin/tempio \
+    curl --proto '=https' --proto-redir '=https' -sSLf -o /usr/bin/tempio \
     "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
